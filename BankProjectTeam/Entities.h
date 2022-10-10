@@ -1,6 +1,5 @@
 #pragma once
 
-
 struct Debtor {
 	char* name;
 	char* surname;
@@ -29,4 +28,5 @@ struct Bank {
 	int totaldebt;
 	int totalbudget;
 };
+
 
