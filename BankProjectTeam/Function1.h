@@ -46,3 +46,28 @@ void GiveCredit(Debtor** debtors) {
 		}
 	}
 }
+
+
+void ShowDebtorDebt(Debtor** debtors) {    
+
+	ShowDebtors(debtors);
+	cout << "Enter debtor's id : ";
+	int selectpayment = 0;
+	cin >> selectpayment;
+	bool isChecking = false;
+	for (size_t i = 0; i < 3; i++)
+	{
+		if (selectpayment == debtors[i]->id) {
+			cout << "Debtor's debt : " << debtors[i]->debt << endl;
+			isChecking = false;
+			break;
+		}
+		else {
+			isChecking = true;
+		}
+	}
+	if (isChecking) {
+		cout << "You have enter incorrect id !!!" << endl;
+	}
+
+}
