@@ -35,3 +35,25 @@ void ShowDebtors(Debtor** debtors) {
 	}
 }
 
+
+void GetDebtorPayment(Debtor** debtors) {   
+	ShowDebtors(debtors);
+	int selectdebt = 0;
+	cout << "Enter debtor's id : ";
+	cin >> selectdebt;
+	bool isChecking = false;
+	for (size_t i = 0; i < 3; i++)
+	{
+		if (selectdebt == debtors[i]->id) {
+			cout << "Debtor's payment : " << debtors[i]->payment << endl;
+			isChecking = false;
+			break;
+		}
+		else {
+			isChecking = true;
+		}
+	}
+	if (isChecking) {
+		cout << "You have enter incorrect id !!!" << endl;
+	}
+}
